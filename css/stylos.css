@@ -9,8 +9,8 @@
 :root {
     --staat-font: "Staatliches", sans-serif;
     --manrope-font: "Manrope", sans-serif;
-    --fondo-degradado: linear-gradient(180deg, lightblue 0%, black 100%);
-    --negro90: rgb(33, 33, 33);
+    --fondo-degradado: linear-gradient(180deg, rgb(10, 77, 77) 0%, black 100%);
+    --negro90: rgb(15, 15, 15);
 }
 
 .staatliches-regular {
@@ -29,99 +29,118 @@
 body {
     height: 100vh;
     width: 100%;
-    background-image: url(img/fondo.jpg);
-
 }
 
- /* .container {
+ .container {
     height: 100%;
     width: 100%;
-    background: var(--fondo-degradado);
+    background-image: url(/img/fondo1.jpg);
     display: grid;
     place-items: center;
 
-}  */
+} 
+
 .sombra{ box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.39);}
 
-
 .tarjeta {
-    height: 550px;
+
+    height: 600px;
     width: 300px;
     background-color: white;
     border-radius: 14px;
-    /* BUSCAR EN W3SCHOOLS propiedades de BORDER RADIUS */
-    
     
     overflow: hidden;
     
     & .encabezado{
-        background-color: rgb(238, 220, 220);
-        height: 60px;
+        background-image: url(/img/fondo1.jpg);
+        height: 160px;
         width: 100%;
     }  
     & .producto{
-        height: 240px;
+        height: 320px;
         width: 100%;
-        background-color: blue;
-        display: flex;
+        position: relative;
+       background-color: #ffc5f4; 
+       
+        & .imagen {
+            position: absolute;
+            height: 150px;
+            width: 150px;
+            background-image: url(/img/foto1.jpg);
+            background-position: center;
+            background-size: contain;
+            border-radius: 50%;
+            margin: 0 auto;
+            background-color: red;
+            top: -90px;
+            left: 78px;
+        }
+
+        & .texto1 {
+            position: relative;
+            top: 64px;
+            left: 38px;
+        }
+
+        & .texto2 {
+            position: relative;
+            top: 65px;
+            left: 38px;
+            font-size: small;
+        }
+
+        & .texto3 {
+            position: relative;
+            top: 110px;
+            left: 38px;
+        }
+
+        & .texto4{
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+
+            & .cuadrado1{
+                display: flex;
+                flex-direction: column;
+            }
+
+            & .cuadrado2{
+                display: flex;
+                flex-direction: column;
+            }
+
+            & .cuadrado3{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+      
+
+
+ 
     } 
-    & .desc_prod{
-        height: 200px;
+
+     & .botonera{
+        height: 120px;
         width: 100%;
-        background-color: rgb(238, 220, 220);
-    } 
-    & .botonera{
-        height: 90%;
-        width: 100%;
-        background-color: rgb(247, 16, 16);
-    } 
+        background-color: #ffc5f4;
+        background-position: center;
+    }  
 
 }
 
-.talles{
-    width: 60%;
-    display: flex;
-    margin: auto;
-    justify-content: space-between;
-    flex-direction: column;
-
-    & li{
-        list-style: none;
-        border: solid 1px rgb(255, 255, 255);
-        height: 30px;
-        width: 30px;
-        border-radius:50%;
-        text-align: center;
-        line-height: 1.8em;
-        font-weight: bolder;
-        color: white;
-        transition: all 0.2 ease-in-out;
-    }
-
-    & li:nth-child(1){
-        background-color: black;
-    }
-
-    & li:nth-child(2){
-        background-color: black;
-    }
-
-    & li:nth-child(3){
-        background-color: black;
-    }
-
-    & li:nth-child(4){
-        background-color: black;
-    }
-
+.linea-horizontal {
+    width: 100%;
+    /* ajusta el ancho según sea necesario */
+    margin: 0px auto;
+    /* centra la línea horizontal */
+    border-style: solid;
+    border-width: 7px;
+    /* ajusta el grosor según sea necesario */
+    background-color: #6406cf;
 }
-.costado {
-    background-color: #ebe9e9;
-    width: 45px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-}
+
 
 
 
